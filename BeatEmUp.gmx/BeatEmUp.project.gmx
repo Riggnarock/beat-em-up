@@ -26,6 +26,7 @@
     <object>objects\obj_Player</object>
     <object>objects\obj_Enemy</object>
     <object>objects\obj_atk</object>
+    <object>objects\obj_atk_basicpunch</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_test</room>
