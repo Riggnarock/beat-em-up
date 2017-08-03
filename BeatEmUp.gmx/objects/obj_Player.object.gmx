@@ -46,6 +46,101 @@ image_speed = .75;
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(CurrentHP &gt; 0){
+    //Checks if either the A or D buttons are pressed to make the player move Left or Right.
+    XSpeed = 0;
+    if(keyboard_check(ord('A'))){
+        XSpeed = -1*Speed;
+    }else if(keyboard_check(ord('D'))){
+        XSpeed = Speed;
+    }
+    //Checks if either the W or S buttons are pressed to make the player move Up or Down.
+    YSpeed = 0;
+    if(OnGround){
+        if(keyboard_check(ord('W'))){
+            YSpeed = -1*Speed;
+        }else if(keyboard_check(ord('S'))){
+            YSpeed = Speed;
+        }
+    }
+    if(IsAttacking == false &amp;&amp; IsHit = false){
+        //If the player is on the ground move them with XSpeed and YSpeed, otherwise ignore YSpeed
+        if(OnGround){    
+            if(XSpeed != 0 &amp;&amp; YSpeed != 0){
+                x+=XSpeed*SpeedMod*.7;
+                y+=YSpeed*SpeedMod*.7;
+            }else if(XSpeed != 0 || YSpeed != 0){
+                x+=XSpeed*SpeedMod;
+                y+=YSpeed*SpeedMod;
+            }
+        }else if(!OnGround){
+            x+=XSpeed*SpeedMod;
+        }
+        //Change the direction of the Player's sprite based on the direction they're moving
+        if(XSpeed != 0){
+            image_xscale = sign(XSpeed*SpeedMod);
+        }
+        //Animate the Player based on what they're doing.
+        //Animates the Player based on their speed
+        if(XSpeed == 0 &amp;&amp; YSpeed == 0 &amp;&amp; OnGround){
+            SpeedMod = 1;
+            sprite_index = spr_Player_idle;
+        }else if((XSpeed!=0 || YSpeed != 0) &amp;&amp; sprite_index!=spr_Player_walk &amp;&amp; OnGround){
+            sprite_index = spr_Player_walk;
+        }
+    }
+}else{
+    instance_destroy();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//If the player is on the ground, this sets their GroundY variable to their current y position
+if(OnGround == true){
+    GroundY = y;
+}
+ 
+//Sets the Players' depth based on their GroundY. We're using GroundY instead of y so that even when they're in the air, they will display in fornt of and behind the right objects.
+depth = -1*GroundY;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
