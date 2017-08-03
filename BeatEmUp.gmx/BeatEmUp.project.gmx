@@ -13,11 +13,17 @@
       <sprite>sprites\spr_Player_basicpunch</sprite>
       <sprite>sprites\spr_Player_strongpunch</sprite>
     </sprites>
+    <sprites name="Enemy">
+      <sprite>sprites\spr_Enemy_idle</sprite>
+      <sprite>sprites\spr_Enemy_hit</sprite>
+      <sprite>sprites\spr_Enemy_walk</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_Player</object>
+    <object>objects\obj_Enemy</object>
   </objects>
   <help>
     <rtf>help.rtf</rtf>
