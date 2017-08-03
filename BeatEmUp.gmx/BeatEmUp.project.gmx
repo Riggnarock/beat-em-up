@@ -25,6 +25,10 @@
     <object>objects\obj_Player</object>
     <object>objects\obj_Enemy</object>
   </objects>
+  <rooms name="rooms">
+    <room>rooms\room_test</room>
+    <room>rooms\room_title</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
