@@ -29,6 +29,9 @@
     <room>rooms\room_test</room>
     <room>rooms\room_title</room>
   </rooms>
+  <constants number="1">
+    <constant name="LayerSize">35</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
