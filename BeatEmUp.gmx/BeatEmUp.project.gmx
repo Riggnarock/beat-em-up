@@ -5,7 +5,15 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprites name="Player">
+      <sprite>sprites\spr_Player_idle</sprite>
+      <sprite>sprites\spr_Player_hit</sprite>
+      <sprite>sprites\spr_Player_walk</sprite>
+      <sprite>sprites\spr_Player_basicpunch</sprite>
+      <sprite>sprites\spr_Player_strongpunch</sprite>
+    </sprites>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <help>
