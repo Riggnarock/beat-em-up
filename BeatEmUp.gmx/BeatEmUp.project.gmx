@@ -18,12 +18,14 @@
       <sprite>sprites\spr_Enemy_hit</sprite>
       <sprite>sprites\spr_Enemy_walk</sprite>
     </sprites>
+    <sprite>sprites\spr_basicpunch_hitbox</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_Player</object>
     <object>objects\obj_Enemy</object>
+    <object>objects\obj_atk</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_test</room>
