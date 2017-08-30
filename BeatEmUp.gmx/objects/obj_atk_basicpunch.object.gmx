@@ -28,7 +28,7 @@
             <string>event_inherited();
 // specific properties of the basic punch
 Damage = 8;
-StunLength = 3;
+StunLength = 10;
 </string>
           </argument>
         </arguments>

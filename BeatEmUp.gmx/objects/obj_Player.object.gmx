@@ -162,8 +162,8 @@ depth = -1*GroundY;
  
 if(!IsHit &amp;&amp; CurrentHP &gt; 0){
     if(AttackType == "Basic Punch"){
-        sprite_index = SPR_PlayerBasicPunch;
-        MyAttack = instance_create(x,y,ATK_BasicPunch);
+        sprite_index = spr_Player_basicpunch;
+        MyAttack = instance_create(x, y, obj_atk_basicpunch);
     }
 }
  
@@ -173,6 +173,32 @@ if(MyAttack != 0){
     MyAttack.image_xscale = image_xscale;
     MyAttack.image_speed = image_speed;
     MyAttack.Owner = "Player";
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (IsAttacking) {
+    IsAttacking = false;
+    SpeedMod = 1;
 }
 </string>
           </argument>
