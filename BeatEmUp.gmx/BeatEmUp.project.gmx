@@ -30,6 +30,7 @@
     <object>objects\obj_Enemy</object>
     <object>objects\obj_button_play</object>
     <object>objects\obj_title</object>
+    <object>objects\obj_button</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_title</room>
