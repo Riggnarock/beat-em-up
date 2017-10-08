@@ -258,7 +258,7 @@ if(keyboard_check(vk_numpad4) || keyboard_check(ord('J')) || keyboard_check(vk_l
     AttackType = "Basic Punch";
 }
  
-if(OnGround == true){
+if(OnGround){
     event_user(2);
 }
 </string>
