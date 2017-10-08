@@ -31,6 +31,36 @@ Damage = 10;
 StunLength = 4;
 Owner = "Player";
 DMGFrame = 3;
+
+HitSound = snd_BasicPunch1;
+MissSound = snd_MissedPunch;
+
+Hit = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (!Hit) {
+    audio_play_sound(MissSound, 10, false);
+}
 </string>
           </argument>
         </arguments>
@@ -58,6 +88,11 @@ DMGFrame = 3;
     other.CurrentHP -= Damage;
     other.IsHit = true;
     other.alarm[0] = StunLength;
+    
+    // play the appropiate sound
+    audio_play_sound(HitSound, 10, false);
+    
+    Hit = true;
      
 }
 </string>
@@ -87,7 +122,11 @@ DMGFrame = 3;
     other.CurrentHP -= Damage;
     other.IsHit = true;
     other.alarm[3] = StunLength;
-     
+    
+    // play the appropiate sound
+    audio_play_sound(HitSound, 10, false);
+    
+    Hit = true;
 }
 </string>
           </argument>
