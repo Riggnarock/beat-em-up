@@ -7,6 +7,7 @@
   <sounds name="sound">
     <sound>sound\snd_BasicPunch1</sound>
     <sound>sound\snd_MissedPunch</sound>
+    <sound>sound\snd_StrongPunch1</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Player">
@@ -21,7 +22,10 @@
       <sprite>sprites\spr_Enemy_hit</sprite>
       <sprite>sprites\spr_Enemy_walk</sprite>
     </sprites>
-    <sprite>sprites\spr_basicpunch_hitbox</sprite>
+    <sprites name="attacks">
+      <sprite>sprites\spr_basicpunch_hitbox</sprite>
+      <sprite>sprites\spr_strongpunch_hitbox</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -30,6 +34,7 @@
     <object>objects\obj_Enemy</object>
     <object>objects\obj_atk</object>
     <object>objects\obj_atk_basicpunch</object>
+    <object>objects\obj_atk_strongpunch</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_test</room>

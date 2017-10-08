@@ -164,6 +164,9 @@ if(!IsHit &amp;&amp; CurrentHP &gt; 0){
     if(AttackType == "Basic Punch"){
         sprite_index = spr_Player_basicpunch;
         MyAttack = instance_create(x, y, obj_atk_basicpunch);
+    } else if (AttackType = "Strong Punch") {
+        sprite_index = spr_Player_strongpunch;
+        MyAttack = instance_create(x, y, obj_atk_strongpunch);
     }
 }
  
@@ -256,6 +259,10 @@ draw_self();
  
 if(keyboard_check(vk_numpad4) || keyboard_check(ord('J')) || keyboard_check(vk_left)){
     AttackType = "Basic Punch";
+}
+
+if (keyboard_check(vk_numpad8) || keyboard_check(ord('I')) || keyboard_check(vk_up)) {
+    AttackType = "Strong Punch";
 }
  
 if(OnGround){
