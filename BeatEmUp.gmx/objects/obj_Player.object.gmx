@@ -41,6 +41,9 @@ OnGround = true;
 GroundY = y;
  
 image_speed = .75;
+
+// Create Camera
+MyCamera = instance_create(x, y, obj_Camera);
 </string>
           </argument>
         </arguments>

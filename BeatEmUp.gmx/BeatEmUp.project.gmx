@@ -30,6 +30,7 @@
       <sprite>sprites\spr_basicpunch_hitbox</sprite>
       <sprite>sprites\spr_strongpunch_hitbox</sprite>
     </sprites>
+    <sprite>sprites\spr_Camera</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -42,6 +43,7 @@
     <object>objects\obj_atk</object>
     <object>objects\obj_atk_basicpunch</object>
     <object>objects\obj_atk_strongpunch</object>
+    <object>objects\obj_Camera</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_title</room>
