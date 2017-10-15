@@ -2,7 +2,7 @@
 <room>
   <caption></caption>
   <width>2048</width>
-  <height>800</height>
+  <height>768</height>
   <vsnap>32</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
@@ -55,6 +55,7 @@
     <instance objName="obj_Enemy" x="704" y="256" name="inst_7D5C71AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Enemy" x="864" y="416" name="inst_19F5488C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Enemy" x="832" y="672" name="inst_18D2D25E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_BattleRegion" x="960" y="384" name="inst_EAC3AF8A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
