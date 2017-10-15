@@ -141,6 +141,73 @@ depth = -1*GroundY;
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="12">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var MyAttack = 0;
+ 
+if(!IsHit &amp;&amp; CurrentHP &gt; 0){
+    if(AttackType == "Basic Punch"){
+        sprite_index = spr_Player_basicpunch;
+        MyAttack = instance_create(x, y, obj_atk_basicpunch);
+    } else if (AttackType = "Strong Punch") {
+        sprite_index = spr_Player_strongpunch;
+        MyAttack = instance_create(x, y, obj_atk_strongpunch);
+    }
+}
+ 
+if(MyAttack != 0){
+    SpeedMod = 0;
+    IsAttacking = true;
+    MyAttack.image_xscale = image_xscale;
+    MyAttack.image_speed = image_speed;
+    MyAttack.Owner = "Player";
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (IsAttacking) {
+    IsAttacking = false;
+    SpeedMod = 1;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -166,6 +233,41 @@ draw_ellipse(x-40,y-8,x+40,y+8,false);
 //Draw my own sprite.
 draw_set_alpha(1);
 draw_self();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>AttackType = "";
+ 
+if(keyboard_check(vk_numpad4) || keyboard_check(ord('J')) || keyboard_check(vk_left)){
+    AttackType = "Basic Punch";
+}
+
+if (keyboard_check(vk_numpad8) || keyboard_check(ord('I')) || keyboard_check(vk_up)) {
+    AttackType = "Strong Punch";
+}
+ 
+if(OnGround){
+    event_user(2);
+}
 </string>
           </argument>
         </arguments>

@@ -4,7 +4,11 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_BasicPunch1</sound>
+    <sound>sound\snd_MissedPunch</sound>
+    <sound>sound\snd_StrongPunch1</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Player">
       <sprite>sprites\spr_Player_idle</sprite>
@@ -22,6 +26,10 @@
       <sprite>sprites\spr_button_play</sprite>
       <sprite>sprites\spr_title</sprite>
     </sprites>
+    <sprites name="attacks">
+      <sprite>sprites\spr_basicpunch_hitbox</sprite>
+      <sprite>sprites\spr_strongpunch_hitbox</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -31,6 +39,9 @@
     <object>objects\obj_button_play</object>
     <object>objects\obj_title</object>
     <object>objects\obj_button</object>
+    <object>objects\obj_atk</object>
+    <object>objects\obj_atk_basicpunch</object>
+    <object>objects\obj_atk_strongpunch</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_title</room>
